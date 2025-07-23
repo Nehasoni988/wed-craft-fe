@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { weddingConfig } from '../../config/wedding.config'
 
-const props = defineProps(['fromSide'])
+const props = defineProps(['vow'])
 
 const weddingConfigPersonalVowSection = weddingConfig.sections.highlights.personalVows
 const herLeftPageTitle = weddingConfigPersonalVowSection.herLeftPageTitle
@@ -37,9 +37,7 @@ const hisVowDescription = weddingConfig.highlights?.personalVows.his.description
               <div class="corner-fold"></div>
               <div class="page-text w-richtext">
                 <h3>
-                  <strong>{{
-                    props.fromSide === 'neha' ? $t(herLeftPageTitle) : $t(hisLeftPageTitle)
-                  }}</strong>
+                  <strong>From heart</strong>
                 </h3>
               </div>
             </div>
@@ -64,19 +62,10 @@ const hisVowDescription = weddingConfig.highlights?.personalVows.his.description
             <div class="page-right-2">
               <div class="page-text w-richtext">
                 <h3>
-                  <strong>{{
-                    props.fromSide === 'neha'
-                      ? $t(herVowTitle, {
-                          poemTitle: herVowTitle,
-                        })
-                      : $t(hisVowTitle, {
-                          poemTitle: hisVowTitle,
-                        })
-                  }}</strong>
+                  <strong>{{ vow.title }}</strong>
                 </h3>
                 <p>‍</p>
-                <div v-if="props.fromSide === 'neha'" v-html="herVowDescription"></div>
-                <div v-else v-html="hisVowDescription"></div>
+                <div v-html="vow.description"></div>
               </div>
             </div>
           </div>

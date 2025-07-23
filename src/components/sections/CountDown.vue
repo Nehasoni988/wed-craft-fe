@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { weddingConfig } from '@/config/wedding.config'
-import { formatDateToUnixMS } from '@/utils/helper'
+import { formatDateToUnixMS } from '@/utils/helpers/helper'
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 
 const days = ref(0)

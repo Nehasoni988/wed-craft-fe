@@ -1,12 +1,23 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
-import Events from "@/components/sections/Events.vue"
-import VideoHighlights from '@/components/sections/highlights/videos/Index.vue'
-import PersonalVows from '@/components/sections/highlights/PersonalVows.vue'
-import MainInvitation from '@/components/sections/MainInvitation.vue'
+import Events from '@/components/sections/Events.vue'
+import MainEvent from '@/components/sections/MainEvent.vue'
 import LocationsOnMap from '@/components/sections/LocationsOnMap.vue'
 import RSVPScan from '@/components/sections/RSVPScan.vue'
+import Highlights from "@/components/sections/Highlights.vue"
 import { weddingConfig } from '../config/wedding.config'
+import {
+  isEventsSectionEnabled,
+  isLocationsSectionEnabled,
+  isPersonalVowSectionEnabled,
+  isHighlightsVideoSectionEnabled,
+  isHighlightsSectionEnabled
+} from '@/utils/helpers/sections/section.helper'
+
+// Constants
+const showEventsSection = isEventsSectionEnabled
+const showLocationsSection = isLocationsSectionEnabled
+const showHighlightsSection = isHighlightsSectionEnabled
 
 onMounted(() => {
   // Function to create falling flowers
@@ -49,22 +60,19 @@ onMounted(() => {
 <template>
   <div class="overflow-y-auto container mx-auto pb-10">
     <!-- Main invitation template -->
-    <MainInvitation></MainInvitation>
+    <MainEvent></MainEvent>
 
     <!-- Events -->
-    <Events v-if="weddingConfig.sections.events.enable"></Events>
+    <Events v-if="showEventsSection"></Events>
 
     <!-- Locations of venue -->
-    <LocationsOnMap v-if="weddingConfig.sections.locations.enable"></LocationsOnMap>
+    <LocationsOnMap v-if="showLocationsSection"></LocationsOnMap>
 
-    <!-- Personal vows -->
-    <PersonalVows v-if="weddingConfig.sections.highlights.personalVows.enable"></PersonalVows>
-
-    <!-- Video highlights -->
-    <VideoHighlights v-if="weddingConfig.sections.highlights.videos.enable"></VideoHighlights>
+    <!-- Highlights -->
+    <Highlights v-if="showHighlightsSection"></Highlights>
 
     <!-- Others -->
-    <RSVPScan v-if="weddingConfig.sections.rsvpScan.enable"></RSVPScan>
+    <!-- <RSVPScan v-if="weddingConfig.sections.rsvpScan.enable"></RSVPScan> -->
   </div>
 
   <!-- Footer -->

@@ -1,23 +1,13 @@
 <script setup lang="ts">
 import { weddingConfig } from '@/config/wedding.config'
-import { formatDate, formatTime } from '@/utils/helper'
+import { herInfo, hisInfo, mainEventDate, mainEventTime, mainEventVenue } from '@/utils/helpers/sections/mainEvent.helper'
 
-// Her details
-const bride = weddingConfig.couple.bride
-const brideName = bride.name
-const brideDesignation = bride.designation.title
-const brideFatherName = bride.parents.father.name
-const brideMotherName = bride.parents.mother.name
-
-// His details
-const groom = weddingConfig.couple.groom
-const groomName = groom.name
-const groomDesignation = groom.designation.title
-const groomFatherName = groom.parents.father.name
-const groomMotherName = groom.parents.mother.name
-
-// Wedding details
-const weddingVenue = weddingConfig.mainEvent.weddingVenue.name
+// Constants
+const herConst = herInfo
+const hisConst = hisInfo
+const mainEventDateConst = mainEventDate
+const mainEventTimeConst = mainEventTime
+const mainEventVenueConst = mainEventVenue
 
 // Other details
 const mainInvitationConfig = weddingConfig.sections.mainInvitation
@@ -28,10 +18,6 @@ const herParentLine = mainInvitationConfig.herParentLine
 const hisParentLine = mainInvitationConfig.hisParentLine
 
 // Methods
-const weddingDate = () => formatDate(weddingConfig.mainEvent.weddingDate)
-
-const weddingTime = () => formatTime(weddingConfig.mainEvent.weddingTime)
-
 const scrollTo = () => {
   const element = document.getElementById('locations')
   element.scrollIntoView({
@@ -49,14 +35,14 @@ const scrollTo = () => {
     </div>
 
     <div class="text-4xl text-customMaroon mt-4">
-      {{ bride.name }} <span class="text-2xl">({{ brideDesignation }})</span>
+      {{ herConst.name }} <span class="text-2xl">({{ herConst.designation }})</span>
     </div>
 
     <div class="text-md text-gray-500">
       ({{
         $t(herParentLine, {
-          herFatherName: brideFatherName,
-          herMotherName: brideMotherName,
+          herFatherName: herConst.parents.father.name,
+          herMotherName: herConst.parents.father.name,
         })
       }})
     </div>
@@ -72,31 +58,31 @@ const scrollTo = () => {
     </div>
 
     <div class="text-4xl text-customMaroon mt-4">
-      {{ groom.name }} <span class="text-2xl">({{ groomDesignation }})</span>
+      {{ hisConst.name }} <span class="text-2xl">({{ hisConst.designation }})</span>
     </div>
 
     <div class="text-md text-gray-500">
       ({{
         $t(hisParentLine, {
-          hisFatherName: groomFatherName,
-          hisMotherName: groomMotherName,
+          hisFatherName: hisConst.parents.father.name,
+          hisMotherName: hisConst.parents.mother.name,
         })
       }})
     </div>
 
     <div class="text-xl font-semibold text-customGolden mt-6 mb-4">
       <!-- FIXME:: This hardcode text needs to be handle -->
-      On <span class="text-2xl">{{ weddingDate() }}</span>
+      On <span class="text-2xl">{{ mainEventDateConst }}</span>
     </div>
 
     <div class="text-lg font-semibold text-gray-700 mt-4">
       <!-- FIXME:: This hardcode text needs to be handle -->
-      {{ weddingTime() }} onwards
+      {{ mainEventTimeConst }} onwards
     </div>
 
     <div class="text-xl font-medium text-customBrightTeal mt-4">
       <!-- FIXME:: This hardcode text needs to be handle -->
-      At {{ weddingVenue }} <br />
+      At {{ mainEventVenueConst }} <br />
       <span class="text-sm underline text-blue-500 cursor-pointer" @click="scrollTo()">
         {{ $t(locationCTA) }}
       </span>

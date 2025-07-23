@@ -18,15 +18,15 @@ export const i18n = createI18n({
           events: {
             herEvents: {
               heading: 'If you are from the Bride side, join us',
-              subHeading: '📍 At {city} ({state}) '
+              subHeading: '📍 At {venue}'
             },
             hisEvents: {
               heading: 'If you are from the Groom side, join us',
-              subHeading: '📍 At {city} ({state})'
+              subHeading: '📍 At {venue}'
             },
             collectiveEvents: {
               heading: 'Together we are celebrating',
-              subHeading: '📍 At {city} ({state})'
+              subHeading: '📍 At {venue}'
             }
           },
           locations: {

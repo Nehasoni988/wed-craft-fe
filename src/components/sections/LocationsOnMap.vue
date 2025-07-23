@@ -1,9 +1,21 @@
 <script setup lang="ts">
 import HeadingsUI from '@/components/ui/HeadingsUI.vue'
 import { weddingConfig } from '@/config/wedding.config'
+import {
+  herEventsVenue,
+  hisEventsVenue,
+  herEventsVenueMapLink,
+  hisEventsVenueMapLink,
+  herEventsVenueMapImage,
+  hisEventsVenueMapImage,
+} from '../../utils/helpers/sections/locations.helper'
 
-const brideVenue = weddingConfig.couple.bride.address.venue
-const groomVenue = weddingConfig.couple.groom.address.venue
+const herEventsVenueConst = herEventsVenue
+const hisEventsVenueConst = hisEventsVenue
+const herEventsVenueMapLinkConst = herEventsVenueMapLink
+const hisEventsVenueMapLinkConst = hisEventsVenueMapLink
+const herEventsVenueMapImageConst = herEventsVenueMapImage
+const hisEventsVenueMapImageConst = hisEventsVenueMapImage
 
 const weddingConfigLocationsSection = weddingConfig.sections.locations
 const locationsSectionHeading = weddingConfigLocationsSection.heading
@@ -30,17 +42,19 @@ const openNewWindow = (url) => {
   <div class="grid grid-cols-12 gap-4">
     <div class="col-span-12 sm:col-span-6 text-center">
       <div class="text-customBrightTeal">{{ $t(herSideVenueLine) }}</div>
-      <div>{{
+      <div>
+        {{
           $t(herSideVenueValue, {
-            venueName: brideVenue.name,
+            venueName: herEventsVenueConst,
           })
-        }}</div>
+        }}
+      </div>
       <div class="flex items-center justify-center mt-10 border-4 border-double border-black">
         <img
           class="cursor-pointer"
-          v-lazy="'https://ik.imagekit.io/zpxvtauqo/nehanaalnihal/map.png?updatedAt=1752149915922'"
+          v-lazy="herEventsVenueMapImageConst"
           alt=""
-          @click="openNewWindow(brideVenue.googleMapLink)"
+          @click="openNewWindow(herEventsVenueMapLinkConst)"
         />
       </div>
     </div>
@@ -49,15 +63,15 @@ const openNewWindow = (url) => {
       <div>
         {{
           $t(hisSideVenueValue, {
-            venueName: groomVenue.name,
+            venueName: hisEventsVenueConst,
           })
         }}
       </div>
       <div
         class="flex items-center justify-center mt-10 border-4 border-double border-black"
-        @click="openNewWindow(groomVenue.googleMapLink)"
+        @click="openNewWindow(hisEventsVenueMapLinkConst)"
       >
-        <img class="cursor-pointer" v-lazy="'https://ik.imagekit.io/zpxvtauqo/nehanaalnihal/jaipur-map.png?updatedAt=1752149915973'" alt="" />
+        <img class="cursor-pointer" v-lazy="hisEventsVenueMapImageConst" alt="" />
       </div>
     </div>
   </div>

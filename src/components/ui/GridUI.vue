@@ -1,9 +1,17 @@
 <script setup lang="ts">
-import { formatDate, formatTime, generateGoogleCalendarLink, isDateMatchedWithToday } from '@/utils/helper'
+import {
+  formatDate,
+  formatTime,
+  generateGoogleCalendarLink,
+  isDateMatchedWithToday,
+} from '@/utils/helpers/helper'
 import { computed } from 'vue'
+import { TDate, TTime } from '../../types/common.types'
+import { TCalendarLink } from '../../types/sections/events.types'
+import { isEventToday } from '../../utils/helpers/sections/events.helper'
 
 // Props
-const props = defineProps(['weddingFunctions', 'fromSide'])
+const props = defineProps(['events', 'fromSide'])
 
 // Computed
 const gridClass = computed(() => {
@@ -21,16 +29,16 @@ const gridClass = computed(() => {
 })
 
 // Methods
-const shouldHighlight = (date) => isDateMatchedWithToday(date)
-const formattedEventDate = (date) => formatDate(date)
-const formattedEventTime = (time) => formatTime(time)
-const generateCalenderLink = (calendarLinkObject) => generateGoogleCalendarLink(calendarLinkObject)
+const shouldHighlight = (date: TDate) => isEventToday(date)
+const eventDate = (date: TDate) => formatDate(date)
+const eventTime = (time: TTime) => formatTime(time)
+const calendarLink = (calendarLink: TCalendarLink) => generateGoogleCalendarLink(calendarLink)
 </script>
 
 <template>
   <div class="grid grid-cols-12 gap-4">
     <div
-      v-for="(fn, index) in weddingFunctions"
+      v-for="(event, index) in events"
       :key="index"
       style="position: relative"
       :class="['relative', gridClass, { highlight: false }]"
@@ -38,7 +46,7 @@ const generateCalenderLink = (calendarLinkObject) => generateGoogleCalendarLink(
       <div class="border-double border-4 border-customOliveGreen h-full">
         <!-- Badge -->
         <span
-          v-if="shouldHighlight(fn.date)"
+          v-if="shouldHighlight(event.date)"
           class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow"
         >
           Today
@@ -46,18 +54,20 @@ const generateCalenderLink = (calendarLinkObject) => generateGoogleCalendarLink(
         <div class="flex items-center justify-center">
           <img
             class="w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-36 lg:h-36 object-cover"
-            v-lazy="fn.image"
+            v-lazy="event.image"
             alt="Function Image"
           />
         </div>
         <div class="p-4 md:p-5">
           <div class="text-center mt-1 text-gray-500 dark:text-neutral-400">
-            <h3 class="text-xl font-bold text-customDarkTeal">{{ fn.name }}</h3>
-            <p class="text-sm font-bold text-customDarkGreenGray">{{ formattedEventDate(fn.date) }}</p>
+            <h3 class="text-xl font-bold text-customDarkTeal">{{ event.name }}</h3>
+            <p class="text-sm font-bold text-customDarkGreenGray">
+              {{ eventDate(event.date) }}
+            </p>
             <p class="text-lg text-gray-600">
-              <span>{{ formattedEventTime(fn.time) }}</span>
+              <span>{{ eventTime(event.time) }}</span>
               <span>, </span>
-              <span>at {{ fn.venue.name }}</span>
+              <span>at {{ event.venue.name }}</span>
             </p>
             <p class="text-sm text-gray-700">
               <span class="font-semibold">
@@ -65,11 +75,11 @@ const generateCalenderLink = (calendarLinkObject) => generateGoogleCalendarLink(
                   props.fromSide === 'together' ? "Bride's Guests' Theme: " : 'Guest Theme: '
                 }}</span>
               </span>
-              {{ fn.guestTheme }}
+              {{ event.guestTheme }}
             </p>
             <p>
               <a
-                :href="generateCalenderLink(fn.calendarLinkObject)"
+                :href="calendarLink(event.calendarLink)"
                 target="_blank"
                 class="text-sm underline text-blue-500 cursor-pointer"
               >
