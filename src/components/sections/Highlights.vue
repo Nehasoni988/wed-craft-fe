@@ -1,13 +1,16 @@
 <script setup lang="ts">
+// IMPORT - Files and folders
 import Videos from '@/components/sections/highlights/Videos.vue'
 import PersonalVows from '@/components/sections/highlights/PersonalVows.vue'
+// IMPORT - Modules
 import {
-  isHighlightsVideoSectionEnabled,
+  isVideoSectionEnabled,
   isPersonalVowSectionEnabled,
 } from '../../utils/helpers/sections/section.helper'
 
+// Constants
 const showPersonalVow = isPersonalVowSectionEnabled
-const showVideos = isHighlightsVideoSectionEnabled
+const showVideos = isVideoSectionEnabled
 </script>
 
 <template>

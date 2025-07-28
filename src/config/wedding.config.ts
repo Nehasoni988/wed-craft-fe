@@ -1,3 +1,4 @@
+import { website } from './website.config';
 import { sections } from "./sections/sections.config";
 import { mainEvent } from "./sections/mainEvent.config";
 import { events } from "./sections/events/events.config";
@@ -14,5 +15,6 @@ export const weddingConfig: WeddingConfig = {
     highlights: {
         personalVows: { ...personalVows },
         videos: [...videos]
-    }
+    },
+    website: {...website}
 }

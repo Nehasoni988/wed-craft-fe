@@ -1,6 +1,7 @@
 export type TPersonalVow = {
     title: string,
-    description: string
+    description: string,
+    tagline: string
 }
 
 export type TPersonalVowGroups = {

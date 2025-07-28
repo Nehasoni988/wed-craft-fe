@@ -1,12 +1,16 @@
 <script setup lang="ts">
+// IMPORT - Files and folders
+
+// IMPORT - Modules
 import { weddingConfig } from '@/config/wedding.config'
 import { formatDateToUnixMS } from '@/utils/helpers/helper'
-import { ref, onMounted, onBeforeUnmount } from 'vue'
 
+// Constants
 const days = ref(0)
 const hours = ref(0)
 const minutes = ref(0)
 const seconds = ref(0)
+const heading = weddingConfig.sections.countDown.heading
 
 let timer
 
@@ -24,10 +28,7 @@ const updateCountdown = () => {
     clearInterval(timer)
   }
 }
-const targetDate = formatDateToUnixMS(
-  weddingConfig.mainEvent.weddingDate,
-  weddingConfig.mainEvent.weddingTime
-)
+const targetDate = formatDateToUnixMS(weddingConfig.mainEvent.date, weddingConfig.mainEvent.time)
 
 onMounted(() => {
   updateCountdown() // Initialize countdown
@@ -40,17 +41,17 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="text-customScarlet">
-    <p>
-      <span class="text-lg">Only </span>
-      <br class="block sm:hidden" />
-      <span class="text-lg sm:text-2xl" id="counter">
-        {{ days }} Days, {{ hours }}H : {{ minutes }}M : {{ seconds }}S
-      </span>
-      <br class="block sm:hidden" />
-      <span class="text-lg"> until we say </span>
-      <span class="text-3xl">'I Do!</span>
-    </p>
+  <div class="text-customScarlet text-center mb-8">
+    <div
+      v-html="
+        $t(heading, {
+          days,
+          hours,
+          minutes,
+          seconds,
+        })
+      "
+    ></div>
   </div>
 </template>
 

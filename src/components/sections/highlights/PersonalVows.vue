@@ -1,13 +1,14 @@
 <script setup lang="ts">
+// IMPORT - Files and folders
 import HeadingsUI from '@/components/ui/HeadingsUI.vue'
 import VowCardUI from '@/components/ui/VowCardUI.vue'
+// IMPORT - Others
 import { weddingConfig } from '../../../config/wedding.config'
 import { herPersonalVow, hisPersonalVow } from '../../../utils/helpers/sections/highlights/personalVows.helper'
 
 // Constants
-const weddingConfigPersonalVowSection = weddingConfig.sections.highlights.personalVows
-const heading = weddingConfigPersonalVowSection.heading
-const subHeading = weddingConfigPersonalVowSection.subHeading
+const heading = weddingConfig.sections.highlights.personalVows.heading
+const subHeading = weddingConfig.sections.highlights.personalVows.subHeading
 
 const herPersonalVowConst = herPersonalVow
 const hisPersonalVowConst = hisPersonalVow

@@ -8,6 +8,9 @@ export const i18n = createI18n({
     en: {
       message: {
         sections: {
+          countDown: {
+            heading: '<span class="text-lg">Only </span><br class="block sm:hidden" /><span class="text-lg sm:text-2xl" id="counter">{days} Days, {hours}H : {minutes}M : {seconds}S</span><br class="block sm:hidden" /><span class="text-lg"> until we say </span><span class="text-3xl">I Do!</span>'
+          },
           mainInvitation: {
             heading: 'Wedding invitation',
             subHeading: 'We request the pleasure of your company on the auspicious occasion of our Wedding Ceremony',
@@ -43,6 +46,10 @@ export const i18n = createI18n({
               subHeading: 'Tears, Smiles, and Too Many Rewrites',
               herLeftPageTitle: 'From her pen ~',
               hisLeftPageTitle: 'From his heart ~',
+            },
+            videos: {
+              heading: 'Our wedding highlights',
+              subheading: "The celebration doesn’t stop here. For more highlights, stay tuned right on this page."
             }
           }
         }

@@ -1,8 +1,13 @@
 <script setup lang="ts">
+// IMPORT - Files and folders
+
+// IMPORT - Modules
 import { weddingConfig } from '../../config/wedding.config'
 
+// Props
 const props = defineProps(['vow'])
 
+// Constants
 const weddingConfigPersonalVowSection = weddingConfig.sections.highlights.personalVows
 const herLeftPageTitle = weddingConfigPersonalVowSection.herLeftPageTitle
 const hisLeftPageTitle = weddingConfigPersonalVowSection.hisLeftPageTitle
@@ -37,7 +42,7 @@ const hisVowDescription = weddingConfig.highlights?.personalVows.his.description
               <div class="corner-fold"></div>
               <div class="page-text w-richtext">
                 <h3>
-                  <strong>From heart</strong>
+                  <strong>{{ vow.tagline }}</strong>
                 </h3>
               </div>
             </div>

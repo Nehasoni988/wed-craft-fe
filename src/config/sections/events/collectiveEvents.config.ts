@@ -10,6 +10,8 @@ export const collectiveEvents: Array<TEvent> = [
             name: 'Ramsnehi Vatika',
             city: 'Bhilwara',
             state: 'Rajasthan',
+            googleMapLink: '',
+            googleMapImage: ''
         },
         image: 'https://ik.imagekit.io/zpxvtauqo/nehanaalnihal/engagement.png?updatedAt=1752149915941',
         calendarLink: {
@@ -30,6 +32,8 @@ export const collectiveEvents: Array<TEvent> = [
             name: 'Ramsnehi Vatika',
             city: 'Bhilwara',
             state: 'Rajasthan',
+            googleMapLink: '',
+            googleMapImage: ''
         },
         image: 'https://ik.imagekit.io/zpxvtauqo/nehanaalnihal/toran.png?updatedAt=1752149915877',
         calendarLink: {
@@ -50,6 +54,8 @@ export const collectiveEvents: Array<TEvent> = [
             name: 'Ramsnehi Vatika',
             city: 'Bhilwara',
             state: 'Rajasthan',
+            googleMapLink: '',
+            googleMapImage: ''
         },
         image: 'https://ik.imagekit.io/zpxvtauqo/nehanaalnihal/varmala.png?updatedAt=1752149915984',
         calendarLink: {
@@ -70,6 +76,8 @@ export const collectiveEvents: Array<TEvent> = [
             name: 'Ramsnehi Vatika',
             city: 'Bhilwara',
             state: 'Rajasthan',
+            googleMapLink: '',
+            googleMapImage: ''
         },
         image: 'https://ik.imagekit.io/zpxvtauqo/nehanaalnihal/phera.png?updatedAt=1752149915967',
         calendarLink: {

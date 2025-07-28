@@ -14,15 +14,13 @@ export type TLocation = {
     name: string,
     city: string,
     state: string,
-    googleMapLink?: string
+    googleMapLink: string
     googleMapImage: string
 }
 
 export type TPeople = {
     mother: TPerson,
     father: TPerson,
-    sister?: TPerson,
-    brother?: TPerson 
 }
 
 export type TPerson = {

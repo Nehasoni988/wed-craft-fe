@@ -1,0 +1,34 @@
+/* Full screen container for the falling animation */
+#flower-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  pointer-events: none; /* Prevent interaction block */
+  overflow: hidden;
+  z-index: 100;
+}
+
+/* Flower styling */
+.flower {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: fall linear infinite; /* Continuous falling animation */
+  opacity: 0.8; /* Slight transparency */
+}
+
+/* Keyframes for the falling effect */
+@keyframes fall {
+  0% {
+    transform: translateY(-10%) rotate(0deg); /* Start above the viewport */
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(120vh) rotate(360deg); /* Fall to beyond the viewport */
+    opacity: 0; /* Fade out */
+  }
+}

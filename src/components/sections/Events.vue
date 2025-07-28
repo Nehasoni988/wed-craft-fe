@@ -1,10 +1,12 @@
 <script lang="ts" setup>
+// IMPORT - Files and folders
 import HerEvents from '@/components/events/HerEvents.vue'
 import HisEvents from '@/components/events/HisEvents.vue'
 import CollectiveEvents from '@/components/events/CollectiveEvents.vue'
 import { weddingConfig } from '@/config/wedding.config'
 import HeadingsUI from '@/components/ui/HeadingsUI.vue'
 import GridUI from '@/components/ui/GridUI.vue'
+// IMPORT - Modules
 import {
   isHerEventsAvailable,
   isHisEventsAvailable,
@@ -27,13 +29,12 @@ const herEventsVenueConst = herEventsVenue
 const hisEventsVenueConst = hisEventsVenue
 const collectiveEventsVenueConst = mainEventVenue
 
-const weddingConfigEventSection = weddingConfig.sections.events
-const herEventsHeading = weddingConfigEventSection.herEvents.heading
-const herEventsSubHeading = weddingConfigEventSection.herEvents.subHeading
-const hisEventsHeading = weddingConfigEventSection.hisEvents.heading
-const hisEventsSubHeading = weddingConfigEventSection.hisEvents.subHeading
-const collectiveEventsHeading = weddingConfigEventSection.collectiveEvents.heading
-const collectiveEventsSubHeading = weddingConfigEventSection.collectiveEvents.subHeading
+const herEventsHeading = weddingConfig.sections.events.herEvents.heading
+const herEventsSubHeading = weddingConfig.sections.events.herEvents.subHeading
+const hisEventsHeading = weddingConfig.sections.events.hisEvents.heading
+const hisEventsSubHeading = weddingConfig.sections.events.hisEvents.subHeading
+const collectiveEventsHeading = weddingConfig.sections.events.collectiveEvents.heading
+const collectiveEventsSubHeading = weddingConfig.sections.events.collectiveEvents.subHeading
 </script>
 
 <template>

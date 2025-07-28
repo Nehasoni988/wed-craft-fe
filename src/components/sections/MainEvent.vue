@@ -1,4 +1,7 @@
 <script setup lang="ts">
+// IMPORT - Files and folders
+
+// IMPORT - Modules
 import { weddingConfig } from '@/config/wedding.config'
 import { herInfo, hisInfo, mainEventDate, mainEventTime, mainEventVenue } from '@/utils/helpers/sections/mainEvent.helper'
 

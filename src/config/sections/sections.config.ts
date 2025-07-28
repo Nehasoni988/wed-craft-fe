@@ -2,9 +2,9 @@ import { TSections } from "../../types/sections/sections.types";
 
 export const sections: TSections = {
     countDown: {
-        enable: false,
-        heading: '',
-        subHeading: ''
+        enable: true,
+        heading: 'message.sections.countDown.heading',
+        subHeading: '',
     },
     mainInvitation: {
         enable: true,
@@ -56,8 +56,8 @@ export const sections: TSections = {
         },
         videos: {
             enable: true,
-            heading: '',
-            subHeading: '',
+            heading: 'message.sections.highlights.videos.heading',
+            subHeading: 'message.sections.highlights.videos.subheading',
         }
     }
 }

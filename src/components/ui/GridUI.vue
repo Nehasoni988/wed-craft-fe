@@ -1,14 +1,15 @@
 <script setup lang="ts">
+// IMPORT - Files and folders
+
+// IMPORT - Modules
 import {
   formatDate,
   formatTime,
-  generateGoogleCalendarLink,
   isDateMatchedWithToday,
 } from '@/utils/helpers/helper'
-import { computed } from 'vue'
 import { TDate, TTime } from '../../types/common.types'
 import { TCalendarLink } from '../../types/sections/events.types'
-import { isEventToday } from '../../utils/helpers/sections/events.helper'
+import { generateGoogleCalendarLink, isEventToday } from '../../utils/helpers/sections/events.helper'
 
 // Props
 const props = defineProps(['events', 'fromSide'])

@@ -10,6 +10,8 @@ export const hisEvents: Array<TEvent> = [
             name: 'Home',
             city: 'Jaipur',
             state: 'Rajasthan',
+            googleMapLink: '',
+            googleMapImage: ''
         },
         image: 'https://ik.imagekit.io/zpxvtauqo/nehanaalnihal/red-ganesha.png?updatedAt=1752149915794',
         calendarLink: {
@@ -30,6 +32,8 @@ export const hisEvents: Array<TEvent> = [
             name: 'Home',
             city: 'Jaipur',
             state: 'Rajasthan',
+            googleMapLink: '',
+            googleMapImage: ''
         },
         image: 'https://ik.imagekit.io/zpxvtauqo/nehanaalnihal/baan.png?updatedAt=1752149915839',
         calendarLink: {
@@ -50,7 +54,10 @@ export const hisEvents: Array<TEvent> = [
             name: 'Home',
             city: 'Jaipur',
             state: 'Rajasthan',
-        }, image: 'https://ik.imagekit.io/zpxvtauqo/nehanaalnihal/haldi-groom.png?updatedAt=1752149915859',
+            googleMapLink: '',
+            googleMapImage: ''
+        }, 
+        image: 'https://ik.imagekit.io/zpxvtauqo/nehanaalnihal/haldi-groom.png?updatedAt=1752149915859',
         calendarLink: {
             eventName: "Nihal's Haldi",
             date: { date: 17, month: 1, year: 2025 },
@@ -69,6 +76,8 @@ export const hisEvents: Array<TEvent> = [
             name: 'Home',
             city: 'Jaipur',
             state: 'Rajasthan',
+            googleMapLink: '',
+            googleMapImage: ''
         },
         image: 'https://ik.imagekit.io/zpxvtauqo/nehanaalnihal/mehandi-groom.png?updatedAt=1752149915895',
         calendarLink: {
@@ -89,6 +98,8 @@ export const hisEvents: Array<TEvent> = [
             name: 'Home',
             city: 'Jaipur',
             state: 'Rajasthan',
+            googleMapLink: '',
+            googleMapImage: ''
         },
         image: 'https://ik.imagekit.io/zpxvtauqo/nehanaalnihal/mayra-bride.png?updatedAt=1752149915870',
         calendarLink: {
@@ -109,6 +120,8 @@ export const hisEvents: Array<TEvent> = [
             name: 'Home',
             city: 'Jaipur',
             state: 'Rajasthan',
+            googleMapLink: '',
+            googleMapImage: ''
         },
         image: 'https://ik.imagekit.io/zpxvtauqo/nehanaalnihal/chaak.png?updatedAt=1752149915887',
         calendarLink: {
@@ -129,6 +142,8 @@ export const hisEvents: Array<TEvent> = [
             name: 'Home',
             city: 'Jaipur',
             state: 'Rajasthan',
+            googleMapLink: '',
+            googleMapImage: ''
         },
         image: 'https://ik.imagekit.io/zpxvtauqo/nehanaalnihal/nikasi.png?updatedAt=1752149915873',
         calendarLink: {
@@ -149,6 +164,8 @@ export const hisEvents: Array<TEvent> = [
             name: 'Bheru Baag Marriage Garden',
             city: 'Jaipur',
             state: 'Rajasthan',
+            googleMapLink: '',
+            googleMapImage: ''
         },
         image: 'https://ik.imagekit.io/zpxvtauqo/nehanaalnihal/reception.png?updatedAt=1752149915836',
         calendarLink: {

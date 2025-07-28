@@ -1,6 +1,12 @@
 <script setup lang="ts">
+// IMPORT - Files and folders
+
+// IMPORT - Modules
+
+// Props
 const props = defineProps(['heading', 'subheading', 'additional', 'htmlIdAttr'])
 </script>
+
 <template>
   <div class="relative flex py-5 items-center mt-16" :id="htmlIdAttr">
     <div class="flex-grow border-t border-gray-400"></div>

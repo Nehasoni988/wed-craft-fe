@@ -24,7 +24,7 @@ export const mainEvent: TMainEvent = {
             designation: 'Code Whisperer',
             parents: {
                 mother: {
-                    name: 'Shobha Soni'
+                    name: 'Shobha Soni',
                 },
                 father: {
                     name: 'Nand Kishor Soni'

@@ -1,9 +1,9 @@
 import { TPersonalVowGroups } from "../../../types/sections/highlights.types";
 
 export const personalVows: TPersonalVowGroups = {
-    her: {
-        title: 'नेहा की कलम से',
-        description: `<p>
+  her: {
+    title: 'नेहा की कलम से',
+    description: `<p>
                     बीता <b>"भीलवाड़ा"</b> के आँगन में, जहां मेरा बचपन, <br />यहाँ की गलियों में घुमा
                     मेरा चंचल मन।
                   </p>
@@ -40,11 +40,12 @@ export const personalVows: TPersonalVowGroups = {
                   <p>और अपनी इस नादान सी <b>"बिटिया"</b> को, हमेशा लाड़ लड़ाते रहना।</p>
                   <p></p>
                   <p></p>
-                  <h6></h6>`
-    },
-    his: {
-        title: 'The New Beginning',
-        description: `<p>You've arrived to bring us cheer</p>
+                  <h6></h6>`,
+    tagline: 'From her pen'
+  },
+  his: {
+    title: 'The New Beginning',
+    description: `<p>You've arrived to bring us cheer</p>
                   <p>Filling each moment with colors so clear.</p>
                   <p></p>
                   <p class="mt-4">This home is yours, your new space,</p>
@@ -55,6 +56,7 @@ export const personalVows: TPersonalVowGroups = {
                   <p>Together we'll face every joy and every hill</p>
                   <p></p>
                   <p class="mt-4">Neha, you're welcome with open arms,</p>
-                  <p>The heartbeat of this family, bringing endless charms.</p>`
-    }
+                  <p>The heartbeat of this family, bringing endless charms.</p>`,
+    tagline: 'From his heart'
+  }
 }

@@ -18,6 +18,8 @@ export const herEvents: Array<TEvent> = [
             name: 'Home',
             city: 'Bhilwara',
             state: 'Rajasthan',
+            googleMapLink: '',
+            googleMapImage: ''
         },
         image: 'https://ik.imagekit.io/zpxvtauqo/nehanaalnihal/red-ganesha.png?updatedAt=1752149915794',
         calendarLink: {
@@ -58,6 +60,8 @@ export const herEvents: Array<TEvent> = [
             name: 'Home',
             city: 'Bhilwara',
             state: 'Rajasthan',
+            googleMapLink: '',
+            googleMapImage: ''
         }, 
         image: 'https://ik.imagekit.io/zpxvtauqo/nehanaalnihal/bride-mehandi.png?updatedAt=1752149915865',
         calendarLink: {
@@ -98,6 +102,8 @@ export const herEvents: Array<TEvent> = [
             name: 'Home',
             city: 'Bhilwara',
             state: 'Rajasthan',
+            googleMapLink: '',
+            googleMapImage: ''
         }, 
         image: 'https://ik.imagekit.io/zpxvtauqo/nehanaalnihal/rajasthani-bride.png?updatedAt=1752149916017',
         calendarLink: {
@@ -138,6 +144,8 @@ export const herEvents: Array<TEvent> = [
             name: 'Venue',
             city: 'Bhilwara',
             state: 'Rajasthan',
+            googleMapLink: '',
+            googleMapImage: ''
         }, 
         image: 'https://ik.imagekit.io/zpxvtauqo/nehanaalnihal/haldi-bride.png?updatedAt=1752149915862',
         calendarLink: {
@@ -178,6 +186,8 @@ export const herEvents: Array<TEvent> = [
             name: 'Home',
             city: 'Bhilwara',
             state: 'Rajasthan',
+            googleMapLink: '',
+            googleMapImage: ''
         }, 
         image: 'https://ik.imagekit.io/zpxvtauqo/nehanaalnihal/mayra-bride.png?updatedAt=1752149915870',
         calendarLink: {
@@ -218,6 +228,8 @@ export const herEvents: Array<TEvent> = [
             name: 'Ramsnehi Vatika',
             city: 'Bhilwara',
             state: 'Rajasthan',
+            googleMapLink: '',
+            googleMapImage: ''
         },
         image: 'https://ik.imagekit.io/zpxvtauqo/nehanaalnihal/sangeet-bride.png?updatedAt=1752149915881',
         calendarLink: {

@@ -1,5 +1,7 @@
 <script setup lang="ts">
+// IMPORT - Files and folders
 import HeadingsUI from '@/components/ui/HeadingsUI.vue'
+// IMPORT - Modules
 import { weddingConfig } from '@/config/wedding.config'
 import {
   herEventsVenue,
@@ -17,17 +19,15 @@ const hisEventsVenueMapLinkConst = hisEventsVenueMapLink
 const herEventsVenueMapImageConst = herEventsVenueMapImage
 const hisEventsVenueMapImageConst = hisEventsVenueMapImage
 
-const weddingConfigLocationsSection = weddingConfig.sections.locations
-const locationsSectionHeading = weddingConfigLocationsSection.heading
-const locationsSectionSubHeading = weddingConfigLocationsSection.subHeading
-
-const herSideVenueLine = weddingConfigLocationsSection.herSideVenueLine
-const herSideVenueValue = weddingConfigLocationsSection.herSideVenueValue
-const hisSideVenueLine = weddingConfigLocationsSection.hisSideVenueLine
-const hisSideVenueValue = weddingConfigLocationsSection.hisSideVenueValue
+const locationsSectionHeading = weddingConfig.sections.locations.heading
+const locationsSectionSubHeading = weddingConfig.sections.locations.subHeading
+const herSideVenueLine = weddingConfig.sections.locations.herSideVenueLine
+const herSideVenueValue = weddingConfig.sections.locations.herSideVenueValue
+const hisSideVenueLine = weddingConfig.sections.locations.hisSideVenueLine
+const hisSideVenueValue = weddingConfig.sections.locations.hisSideVenueValue
 
 // Methods
-const openNewWindow = (url) => {
+const openNewWindow = (url: string) => {
   window.open(url)
 }
 </script>

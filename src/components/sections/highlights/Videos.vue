@@ -1,20 +1,26 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { weddingConfig } from '@/config/wedding.config'
+// IMPORT - Files and folders
 import HeadingsUI from '@/components/ui/HeadingsUI.vue'
+import { weddingConfig } from '../../../config/wedding.config'
+// IMPORT - Modules
+import { weddingHighlightsVideos } from '../../../utils/helpers/sections/highlights/videos.helper'
 
-const weddingHighlightsVideos = weddingConfig.highlights.videos
+// Constants
+const weddingVideos = weddingHighlightsVideos
+
+const heading = weddingConfig.sections.highlights.videos.heading
+const subHeading = weddingConfig.sections.highlights.videos.subHeading
 </script>
 
 <template>
   <HeadingsUI
-    heading="Our Wedding Highlights"
-    subheading="The celebration doesn’t stop here. For more highlights, stay tuned right on this page."
+    :heading="$t(heading)"
+    :subheading="$t(subHeading)"
   ></HeadingsUI>
 
   <div class="grid grid-cols-12 gap-4">
     <div
-      v-for="(video, index) in weddingHighlightsVideos"
+      v-for="(video, index) in weddingVideos"
       :key="index"
       class="col-span-6 sm:col-span-4 md:col-span-4"
     >
